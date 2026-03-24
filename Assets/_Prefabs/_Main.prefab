@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1359218665476190461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789823385746128848}
+  - component: {fileID: 3731707968626356284}
+  - component: {fileID: 8762407291751115997}
+  m_Layer: 0
+  m_Name: _Main
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &789823385746128848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359218665476190461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 3.50001, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3731707968626356284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359218665476190461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f60df970fdd44ce9b4c3d988d8e490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Main
+  scoreToNextLevel: 1000
+  enemySpawnPerSecond: 3
+  gameRestartDelay: 2
+  prefabEnemies:
+  - {fileID: 593662925735661010, guid: e546562af8f3846e19702494a0e5b59a, type: 3}
+  - {fileID: 2255810342370968437, guid: f929cddba80424ece8ed82aac691ffb3, type: 3}
+  - {fileID: 4962146912095039194, guid: d4141cbd82f0f46859d545d23d93eb01, type: 3}
+  - {fileID: 9088594196579813327, guid: ed71700199afa48998ab9fa2f43e130c, type: 3}
+  - {fileID: 453439291794334809, guid: 7fb672f5b983043569b0aa9a2b3bb890, type: 3}
+  weaponDefinitions:
+  - type: 1
+    letter: B
+    color: {r: 1, g: 1, b: 1, a: 1}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
+    damageOnHit: 10
+    delayBetweenShots: 0
+    velocity: 30
+  - type: 3
+    letter: P
+    color: {r: 1, g: 0, b: 0, a: 1}
+    projectileColor: {r: 1, g: 0, b: 0, a: 1}
+    damageOnHit: 10
+    delayBetweenShots: 0
+    velocity: 30
+  - type: 2
+    letter: S
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    projectileColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    damageOnHit: 10
+    delayBetweenShots: 0
+    velocity: 30
+  - type: 7
+    letter: L
+    color: {r: 0, g: 1, b: 1, a: 1}
+    projectileColor: {r: 0, g: 1, b: 1, a: 1}
+    damageOnHit: 10
+    delayBetweenShots: 0
+    velocity: 30
+  powerUpPrefabs:
+  - {fileID: 3248399151495090678, guid: 74a02cf7ac486437bb064def04614e36, type: 3}
+  scoreGT: {fileID: 0}
+  livesGT: {fileID: 0}
+--- !u!114 &8762407291751115997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359218665476190461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27055bacbd76f48158df88b6faa7fa2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoundsCheck
+  radius: 1
+  keepOnScreen: 1
+  isOnScreen: 1
+  camWidth: 0
+  camHeight: 0
+  offRight: 0
+  offLeft: 0
+  offUp: 0
+  offDown: 0
